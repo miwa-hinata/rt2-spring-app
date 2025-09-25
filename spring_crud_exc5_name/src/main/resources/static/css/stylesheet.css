@@ -4,7 +4,8 @@
 
 /* ---- 文字の色 ---- */
 body {
-	color: #12526d;
+	color: #222222;
+	background-color: #FEFAF6;
 }
 
 /* ---- ページタイトル ---- */
@@ -80,6 +81,7 @@ table td {
 }
 
 /* ---- 入力フォーム(検索、登録、変更、削除) ---- */
+
 div.form {
 	display: flex;
 	width: 720px;

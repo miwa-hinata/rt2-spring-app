@@ -1,6 +1,5 @@
 package jp.co.sss.crud.controller;
 
-import java.text.ParseException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +25,8 @@ public class ListController {
 	@Autowired
 	SearchForEmployeesByDepartmentService searchForEmployeesByDepartmentService;
 
-	/**
-	 * 社員情報を全件検索した結果を出力
-	 *
-	 * @param model モデル
-	 * @return 遷移先のビュー
-	 * @throws ParseException 
-	 */
+	
+	//社員情報を全件検索した結果を出力
 	@RequestMapping(path = "/list", method = RequestMethod.GET)
 	public String findAll(Model model) {
 
@@ -42,14 +36,7 @@ public class ListController {
 		return "list/list";
 	}
 
-	/**
-	 * 社員情報を社員名検索した結果を出力
-	 *
-	 * @param empName 検索対象の社員名
-	 * @param model モデル
-	 * @return 遷移先のビュー
-	 * @throws ParseException 
-	 */
+	 //社員情報を社員名検索した結果を出力
 	@RequestMapping(path = "/list/empName", method = RequestMethod.GET)
 	public String findByEmpName(String empName, Model model) {
 
@@ -58,15 +45,8 @@ public class ListController {
 		model.addAttribute("employees", searchByEmpNameList);
 		return "list/list";
 	}
-
-	/**
-	 * 社員情報を部署ID検索した結果を出力
-	 *
-	 * @param deptId 検索対象の部署ID
-	 * @param model モデル
-	 * @return 選先のビュー
-	 * @throws ParseException 
-	 */
+	
+    //社員情報を部署ID検索した結果を出力
 	@RequestMapping(path = "/list/deptId", method = RequestMethod.GET)
 	public String findByDeptId(Integer deptId, Model model) {
 

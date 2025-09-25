@@ -10,6 +10,13 @@
 	
 	<div class="update">
 		<form th:action="@{/update/check}" method="post" th:object="${employeeForm}">
+			<form th:action="@{/regist/check}" method="post" th:object="${employeeForm}">
+	 <p>
+		<span th:each="error:${#fields.detailedErrors()}">
+		<span th:text="${error.message}" class="error"></span><br>
+		</span>
+		<span th:text="${errMessage}" class="error"></span>
+	</p>
 	
 			<div class="form">
 				<div class="label">パスワード：</div>
@@ -70,7 +77,7 @@
 				<div class="label"></div>
 				<div class="input">
 					<input type="hidden" th:field="*{empId}" />
-					<input type="submit" value="変更" />
+					<input type="submit" value="変更"class="changeColor" />
 				</div>
 			</div>
 		</form>
@@ -79,7 +86,7 @@
 			<div class="form">
 				<div class="label"></div>
 				<div class="input">
-					<input type="submit" value="戻る" />
+					<input type="submit" value="戻る"class="changeColor" />
 				</div>
 			</div>
 		</form>

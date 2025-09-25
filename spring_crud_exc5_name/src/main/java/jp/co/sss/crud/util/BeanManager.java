@@ -108,7 +108,7 @@ public class BeanManager {
 	 * @param deptId
 	 * @return deptName
 	 */
-	public static String getDeptName(Integer deptId) {
+	private static String getDeptName(Integer deptId) {
 
 		String deptName = null;
 
@@ -162,6 +162,12 @@ public class BeanManager {
 		return tempEmployeeBeans;
 	}
 
+	/**
+	 * EmployeeForm -> EmployeeBean コピー
+	 * 
+	 * @param employee
+	 * @return
+	 */
 	public static EmployeeBean copyEntityToBean(Employee employee) {
 
 		EmployeeBean employeeBean = new EmployeeBean();
